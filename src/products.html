@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Your Company Name] - Coffee Beans</title>
+    <link rel="stylesheet" href="prostyle.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+        <a class="logo" href="#">Wild Coffee Beans<span>.</span></a>
+        <ul class="menu-links">
+          <span id="close-menu-btn" class="material-symbols-outlined"></span>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+        <span id="hamburger-btn" class="material-symbols-outlined"></span>
+      </nav>
+    </header>
+
+    <section>
+        <div id="arabica" class="product">
+            <img src="images/Arabica.png" alt="Arabica Coffee Beans">
+            <h2>Arabica Coffee Beans</h2>
+            <p>Price: $55</p>
+            <p>Experience the complex and nuanced flavors of our Arabica beans. Perfect for those who appreciate a wide range of taste notes, including fruity, floral, and acidic.</p>
+            <button onclick="addToCart('Arabica')">Add to Cart</button>
+            <button onclick="buyNow('Arabica')">Buy Now</button>
+        </div>
+
+        <div id="robusta" class="product">
+            <img src="images/Robusta.png" alt="Robusta Coffee Beans">
+            <h2>Robusta Coffee Beans</h2>
+            <p>Price: $70</p>
+            <p>Indulge in the strong and robust flavor of our Robusta beans. Known for their bitterness and heavier body, Robusta beans are an excellent choice for a bold coffee experience.</p>
+            <button onclick="addToCart('Robusta')">Add to Cart</button>
+            <button onclick="buyNow('Robusta')">Buy Now</button>
+        </div>
+
+        <div id="ethiopian" class="product">
+            <img src="images/ethiopian.jpg" alt="Ethiopian Coffee Beans">
+            <h2>Ethiopian Coffee Beans</h2>
+            <p>Price: $100</p>
+            <p>Explore the bright acidity and distinct flavors of our Ethiopian coffees. Each cup offers a unique experience with fruity and wine-like notes, reflecting the diverse regions of Ethiopia.</p>
+            <button onclick="addToCart('Ethiopian')">Add to Cart</button>
+            <button onclick="buyNow('Ethiopian')">Buy Now</button>
+        </div>
+
+        <div id="colombian" class="product">
+          <img src="images/colombian.jpg" alt="Arabica Coffee Beans">
+          <h2>Colombian Coffee Beans</h2>
+          <p>Price: $55</p>
+          <p>Colombian coffee is often characterized by its well-balanced acidity, medium body, and notes of caramel and nut. Colombian coffee is grown in diverse regions, each contributing unique qualities to the beans.</p>
+          <button onclick="addToCart('Colombian')">Add to Cart</button>
+            <button onclick="buyNow('Colombian')">Buy Now</button>
+      </div>
+
+      <div id="brazillian" class="product">
+          <img src="images/brazil.jpg" alt="Robusta Coffee Beans">
+          <h2>Brazillian Coffee Beans</h2>
+          <p>Price: $70</p>
+          <p>Brazilian coffee is known for its smooth, mild flavor with low acidity. It often exhibits nutty, chocolate, and caramel notes. Brazil is one of the largest coffee producers globally.</p>
+          <button onclick="addToCart('Brazilian')">Add to Cart</button>
+          <button onclick="buyNow('Brazilian')">Buy Now</button>
+      </div>
+
+      <div id="jamaican" class="product">
+          <img src="images/jamaica.jpg" alt="Ethiopian Coffee Beans">
+          <h2>Jamaican Coffee Beans</h2>
+          <p>Price: $100</p>
+          <p>Grown in the Blue Mountains of Jamaica, this coffee is celebrated for its mild flavor, bright acidity, and lack of bitterness. It is one of the most sought-after and expensive coffee varieties.</p>
+          <button onclick="addToCart('jamaican')">Add to Cart</button>
+          <button onclick="buyNow('jamaican')">Buy Now</button>
+      </div>
+
+      <div id="sumatra" class="product">
+        <img src="images/sumatra.jpg" alt="Ethiopian Coffee Beans">
+        <h2>Sumatra Coffee Beans</h2>
+        <p>Price: $100</p>
+        <p>Sumatran coffees, including Mandheling, are known for their full body, low acidity, and earthy, herbal, and sometimes spicy flavors. They are often used in espresso blends.</p>
+        <button onclick="addToCart('Sumatra')">Add to Cart</button>
+        <button onclick="buyNow('Sumatra')">Buy Now</button>
+      </div>
+
+      <div id="kenyan" class="product">
+        <img src="images/kenyan.jpg" alt="Ethiopian Coffee Beans">
+        <h2>Kenyan Coffee Beans</h2>
+        <p>Price: $100</p>
+        <p>Kenyan coffees are known for their bright acidity and fruity, wine-like flavors. The beans are often grown at high altitudes, contributing to their unique characteristics.</p>
+        <button onclick="addToCart('Kenyan')">Add to Cart</button>
+        <button onclick="buyNow('Kenyan')">Buy Now</button>
+      </div>
+        <!-- Add more product divs for other types -->
+    </section>
+
+    <footer>
+        <p>&copy; 2023 wildcoffeebeans. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Function to handle adding a product to the cart
+      function addToCart(productName) {
+          alert('Added ' + productName + ' to the cart!');
+          // Add your logic for adding the product to the cart here
+          // For example, you might update a shopping cart object or send a request to a server
+      }
+  
+      // Function to handle the "Buy Now" action
+      function buyNow(productName) {
+          alert('Buy Now: ' + productName);
+          // Add your logic for initiating the purchase here
+          // For example, you might redirect the user to a checkout page
+      }
+  </script>
+
+</body>
+</html>

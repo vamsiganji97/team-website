@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - [Your Company Name]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product img {
+            max-width: 100px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .cart-total {
+            text-align: right;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>[Your Company Name]</h1>
+        <p>Shopping Cart</p>
+    </header>
+
+    <section id="cart-content">
+        <!-- The shopping cart content will be dynamically updated here -->
+    </section>
+
+    <div class="cart-total" id="cart-total">
+        Total: $0.00
+    </div>
+
+    <button class="checkout-btn" onclick="checkout()">Checkout</button>
+
+    <footer>
+        <p>&copy; 2023 [Your Company Name]. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Define a variable to store the shopping cart items
+        var shoppingCart = [];
+
+        // Function to add a product to the shopping cart
+        function addToCart(productName) {
+            alert('Added ' + productName + ' to the cart!');
+            // Add your logic for adding the product to the cart
+            // For simplicity, we'll just update the shoppingCart array
+            shoppingCart.push({ name: productName, price: 10.00 }); // You can replace 10.00 with the actual price
+            updateCart();
+        }
+
+        // Function to update the shopping cart content on the page
+        function updateCart() {
+            var cartContent = document.getElementById('cart-content');
+            var cartTotalElement = document.getElementById('cart-total');
+            var total = 0;
+
+            // Clear the existing cart content
+            cartContent.innerHTML = '';
+
+            // Loop through the items in the shopping cart and display them
+            for (var i = 0; i < shoppingCart.length; i++) {
+                var product = shoppingCart[i];
+
+                // Create a div for each product
+                var productDiv = document.createElement('div');
+                productDiv.classList.add('product');
+
+                // Display product information
+                productDiv.innerHTML = `
+                    <img src="product-image-placeholder.jpg" alt="${product.name}">
+                    <div>
+                        <h3>${product.name}</h3>
+                        <p>$${product.price.toFixed(2)}</p>
+                    </div>
+                `;
+
+                // Append the product div to the cart content
+                cartContent.appendChild(productDiv);
+
+                // Update the total price
+                total += product.price;
+            }
+
+            // Display the total price
+            cartTotalElement.textContent = 'Total: $' + total.toFixed(2);
+            
+        }
+
+        function checkout() {
+            alert('Checkout clicked! Implement your checkout logic here.');
+            // Add your logic for handling the checkout process
+            // For example, redirecting to a checkout page
+        }
+    </script>
+
+</body>
+</html>
